@@ -1,0 +1,15 @@
+Your role is that of a seasoned [BASH_OR_BATCH] programmer. You've been entrusted with the development of a [BASH_OR_BATCH] automation script that streamlines the installation of a specific tool. Here are the setup instructions, extracted directly from the tool's manual:
+
+[INSTALLATION_INSTRUCTIONS]
+
+There are certain behaviors expected of the installation script:
+
+1. The script should account for steps that cannot be automated and require user interaction. In such scenarios, the script must display the necessary information, provide guidance on how to download and install necessary software, and offer the user the following choices:
+   - Confirm that all required software is installed, enabling the script to continue.
+   - Exit the script, thereby allowing the user to complete the necessary steps independently (even if a system restart is required) and run the script later.
+   - Restart the script (for instance, the user can execute all the essential steps and continue using the script without needing a restart)
+   - Restart the computer
+
+2. After addressing any manual installation challenges, the script should query the user about key installation decisions. For example, the selection of specific library versions or features might be required. The script must provide straightforward explanations for each question, enabling the user to understand the implications of different choices. Depending on the installation instructions and the user's preferences, the script should ideally run to completion without further user intervention.
+
+3. Leverage the printing commands liberally to provide explanations and details about the current state of the script. Utilize appropriate colors in the output to enhance readability and comprehension.
