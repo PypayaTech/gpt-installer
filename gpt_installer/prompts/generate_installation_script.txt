@@ -10,7 +10,7 @@ There are certain behaviors expected of the installation script:
    - Confirm that all required software is installed, enabling the script to continue.
    - Exit the script, thereby allowing the user to complete the necessary steps independently and run the script later.
 
-2. After addressing any manual installation challenges, the script should query the user about key installation decisions. For example, the selection of specific library versions or features might be required. The script must provide straightforward explanations for each question, enabling the user to understand the implications of different choices. Depending on the installation instructions and the user's preferences, the script should ideally run to completion without further user intervention.
+2. After resolving any challenges with manual installation, the script should prompt the user for key decisions regarding the installation. For instance, the selection of specific library versions or features might be required. The script must provide clear explanations for each question, enabling the user to understand the implications of their choices. The script should verify that the user's input is in a valid format; if it isn't, the script should repeat the question until it receives a correct response. Based on the installation instructions and the user's preferences, the script should ideally run to completion without needing further input from the user.
 Example decisions to be made by the user:
 - Installing stable or development version
 - Installing particular additional feature or not
