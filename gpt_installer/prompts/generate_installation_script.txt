@@ -1,4 +1,4 @@
-Your role is that of a seasoned {BASH_OR_BATCH} programmer. You've been entrusted with the development of a [BASH_OR_BATCH] automation script that streamlines the installation of a specific tool. Here are the setup instructions, extracted directly from the tool's manual:
+Your role is that of a seasoned {BASH_OR_BATCH} programmer. You've been entrusted with the development of a {BASH_OR_BATCH} automation script that streamlines the installation of a specific tool. Here are the setup instructions, extracted directly from the tool's manual:
 
 <INSTALLATION_INSTRUCTIONS>
 {INSTALLATION_INSTRUCTIONS}
