@@ -24,6 +24,6 @@ def get_openai_api_reply(input_messages: List[Dict[str, Any]], model: str = "gpt
     Returns:
         str: The content of the response from the assistant.
     """
-    response = openai.ChatCompletion.create(messages=input_messages, model=model, temperature=temperature)
-    response_content = response.choices[0].message["content"]
+    response = openai.chat.completions.create(messages=input_messages, model=model, temperature=temperature)
+    response_content = response.choices[0].message.content
     return response_content
