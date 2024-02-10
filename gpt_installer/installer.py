@@ -16,17 +16,18 @@ class Installer:
         else:
             readme_content = readme_content_or_path
         self._extract_installation_instructions_prompt = self._extract_installation_instructions_prompt.replace(
-            "[MANUAL]", readme_content)
+            "{MANUAL}", readme_content)
         return get_openai_api_reply(
             [{"role": "system", "content": self._extract_installation_instructions_prompt}])
 
     def generate_installation_script(self, installation_instructions):
-        self._generate_installation_script_prompt = self._generate_installation_script_prompt.replace("[BASH_OR_BATCH]",
+        self._generate_installation_script_prompt = self._generate_installation_script_prompt.replace("{BASH_OR_BATCH}",
                                                                                                       self._language)
         self._generate_installation_script_prompt = self._generate_installation_script_prompt.replace(
-            "[INSTALLATION_INSTRUCTIONS]", installation_instructions)
+            "{INSTALLATION_INSTRUCTIONS}", installation_instructions)
         return get_openai_api_reply(
             [{"role": "system", "content": self._generate_installation_script_prompt}])
 
-    def run_installation_script(self, installation_script):
+    @staticmethod
+    def run_installation_script(installation_script):
         subprocess.run(installation_script, shell=True)
